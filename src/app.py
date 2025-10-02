@@ -46,8 +46,6 @@ print("Buscando dados do Data Warehouse...")
 df_completo = pd.read_sql(sql_query, db_engine)
 print("Dados carregados com sucesso!")
 
-# GERAÇÃO DOS GRÁFICOS (Sem alterações)
-
 sns.set_theme(style="whitegrid")
 
 # --- GRÁFICO 1: Comparação de preços médios por cidade ---
