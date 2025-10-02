@@ -171,7 +171,7 @@ try:
                     navegador.switch_to.window(navegador.window_handles[0])
                 time.sleep(random.uniform(1.5, 3.5))
 
-    logging.info("\nColeta finalizada. Salvando dados em formato JSON...")
+    logging.info("\nSalvando dados no arquivo.")
     try:
         with open('hospedagens.json', 'w', encoding='utf-8') as f:
             if dados_airbnb:
