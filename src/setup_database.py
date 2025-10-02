@@ -11,7 +11,7 @@ DB_NAME = 'pixtur_dw'
 
 SQL_DIR = Path(__file__).parent.parent / 'database'
 SCHEMA_FILE = SQL_DIR / 'data_warehouse.sql'
-INSERT_FILE = SQL_DIR / 'insert_data.sql'
+# INSERT_FILE = SQL_DIR / 'insert_data.sql'
 
 def execute_sql_file(engine, filepath):
     print(f"Executando script: {filepath.name}...")
@@ -49,7 +49,7 @@ def main():
 
     try:
         execute_sql_file(engine, SCHEMA_FILE)
-        execute_sql_file(engine, INSERT_FILE)
+        # execute_sql_file(engine, INSERT_FILE)
         print("\n🎉 Setup do Data Warehouse concluído com sucesso! O banco de dados está pronto.")
     except Exception:
         print("\n🔥 Ocorreu um erro durante o setup. O processo foi interrompido.")

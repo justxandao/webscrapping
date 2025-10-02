@@ -92,19 +92,3 @@ ax4.set_xlabel('Ano-Mês', fontsize=12)
 ax4.set_ylabel('Preço Médio da Diária (R$)', fontsize=12)
 plt.tight_layout()
 plt.show()
-
-# GRÁFICO 5: Ranking das hospedagens mais bem avaliadas por região
-print("\nGerando Gráfico 5: Ranking das Melhores Hospedagens...")
-cidade_escolhida = 'Salvador'
-
-df_cidade_filtrada = df_completo[df_completo['cidade'] == cidade_escolhida]
-df_ranking = df_cidade_filtrada.sort_values(by='nota_media', ascending=False).head(10)
-
-plt.figure(figsize=(12, 8))
-ax5 = sns.barplot(x='nota_media', y='nome', data=df_ranking, palette='coolwarm')
-ax5.set_title(f'Top Hospedagens Mais Bem Avaliadas em {cidade_escolhida}', fontsize=16)
-ax5.set_xlabel('Nota Média', fontsize=12)
-ax5.set_ylabel('Hospedagem', fontsize=12)
-ax5.set_xlim(left=7.5, right=10)
-plt.tight_layout()
-plt.show()
